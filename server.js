@@ -12,6 +12,11 @@ app.use(express.json());
 const authRoutes = require("./routes/authRoutes");
 app.use("/auth", authRoutes);
 
+//Koppla projectRoutes
+const projectRoutes = require("./routes/projectRoutes");
+app.use("/projects", projectRoutes);
+
+
 //test route
 
 app.get("/", (req, res) => {

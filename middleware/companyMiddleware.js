@@ -1,4 +1,4 @@
-exportrs.onlyCompany = (req, res, next) => {
+exports.onlyCompany = (req, res, next) => {
   if (!req.user) {
     return res.status(401).json({ message: "Not authorized, no user" });
   }

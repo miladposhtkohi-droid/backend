@@ -1,4 +1,5 @@
 exports.onlyAdmin = (req, res, next) => {
+  
   //check if protect added req.user
   if (!req.user) {
     return res.status(401).json({ message: "Not authorized, no user" });
