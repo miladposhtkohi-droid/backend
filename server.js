@@ -15,7 +15,9 @@ app.use("/auth", authRoutes);
 //Koppla projectRoutes
 const projectRoutes = require("./routes/projectRoutes");
 app.use("/projects", projectRoutes);
-
+//KKoppla bidRoutes
+const bidRoutes = require("./routes/bidRoutes");
+app.use("/bids", bidRoutes);
 
 //test route
 
