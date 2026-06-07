@@ -6,4 +6,6 @@ exports.onlyCompany = (req, res, next) => {
   if (req.user.role !== "company") {
     return res.status(403).json({ message: "Access denied, company only" });
   }
+
+  next();
 };
