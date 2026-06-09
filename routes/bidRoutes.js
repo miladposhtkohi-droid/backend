@@ -10,11 +10,11 @@ const {
 
 const router = express.Router();
 
+//company hämtar alla bud som de har lagt (MÅSTE vara före /:projectId!)
+router.get("/company", protect, onlyCompany, getBidsByCompany);
 //company lägger bud
 router.post("/", protect, onlyCompany, createBid);
 //customer hämtar alla bud för ett specifikt projekt
-router.get("/project/:projectId", protect, onlyCustomer, getBidsByProject);
-//company hämtar alla bud som de har lagt
-router.get("/company", protect, onlyCompany, getBidsByCompany);
+router.get("/:projectId", protect, onlyCustomer, getBidsByProject);
 
 module.exports = router;
